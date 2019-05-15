@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  webapplication1:
+    image: ${DOCKER_REGISTRY-}webapplication1
+    ports:
+      - '80'
+    build:
+      context: .
+      dockerfile: WebApplication1/Dockerfile
+
+  webapplication9:
+    image: ${DOCKER_REGISTRY-}webapplication9
+    ports:
+      - '801'
+    build:
+      context: .
+      dockerfile: WebApplication9/Dockerfile
+

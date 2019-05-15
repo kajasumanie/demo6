@@ -1,0 +1,30 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/f_to_c?f={degrees}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "WebApplication1",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/WebApplication1/{degrees}"
+    },
+    {
+      "DownstreamPathTemplate": "/api/WebApplication9/{sku}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "WebApplication9",
+          "Port": 801
+        }
+      ],
+      "UpstreamPathTemplate": "/api/WebApplication1/{sku}"
+    }
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://webapplication120190515084014.azurewebsites.net"
+  }
+}
